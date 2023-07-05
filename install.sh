@@ -1,5 +1,3 @@
-git clone https://github.com/rcsnjszg/laravel-alap.git "$1"
-cd "$1"
 cp .env.example .env
 docker-compose build
 docker-compose up -d
