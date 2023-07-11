@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreParcelsRequest;
 use App\Http\Resources\ParcelsResource;
 use App\Models\Parcels;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -39,12 +40,12 @@ class ParcelsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Parcels  $parcel
      * @return \Illuminate\Http\Response
      */
-    public function show(Parcels $parcels)
+    public function show(Parcels $parcel_number)
     {
-        return $parcels;
+        return new ParcelsResource($parcel_number);
     }
 
     /**

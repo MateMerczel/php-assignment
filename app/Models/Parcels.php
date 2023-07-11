@@ -11,6 +11,14 @@ class Parcels extends Model
 
     protected $table = "parcels";
     public $timestamps = false;
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'parcel_number';
+    public $incrementing = false;
+    
     protected $fillable = [
         'parcel_number',
         'size',
